@@ -22,3 +22,11 @@ EXPOSE 80 22 27017
 
 CMD ["service", "mongod", "start"]
 
+
+
+FROM      centos
+RUN echo  "hi this is centos"
+RUN yum update
+Run yum -y install httpd
+EXPOSE 80 22
+CMD  ["service", "httpd", "start"]
